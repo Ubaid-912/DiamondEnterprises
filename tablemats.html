@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tablemats.css">
+    <title>Document</title>
+    <style>
+.product-list{
+    padding-top: 20px;
+    
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diamond Enterprises</h1>
+        <nav>
+              <a class="hm" href="index.html">Home</a>
+          <a class="pro" href="products.html">Products</a>
+          <a class="con" href="contacts.html">Contact</a>
+          <a class="ab" href="about.html">About</a>
+        </nav>
+
+      </header>
+    <main>
+           <div class="product-list" id="product-list">
+      <!-- Product Cards Injected by JS -->
+    </div>
+
+</div>
+  <script>
+
+    const products = [
+          { name: "Stunning Gold Leaf Cutwork PVC Table Mats - Perfect for Dining, Kitchen, and Dressing Tables", price: 600, image: "11.jpg" },
+          { name: "Luxury Dining Table Mat Rectangle 12 x 18 cm Water and Heat proof – 1 pcs", price: 600, image: "22.jpg" },
+          { name: "Luxury Dining Table Mat Round 15 x 15 cm Water and Heat proof – 1 pcs", price: 600, image: "33.jpg" },
+          { name: "Luxury Dining Table Mat Rectangle 12 x 18 cm Water and Heat proof 1 pcs", price: 600, image: "44.jpg" },
+          { name: "Luxury Dining Table Mat Round 15 x 15 cm Water and Heat proof – 1 pcs", price: 600, image: "55.jpg" },
+          { name: "Luxury Dining Table Mat Rectangle 12 x 18 cm Water and Heat proof 1 pcs", price: 600, image: "66.jpg" },
+          { name: "Luxury Dining Table Mat Rectangle 12 x 18 cm Water and Heat proof 1 pcs", price: 600, image: "77.jpg" },
+          { name: "Luxury Dining Table Mat Round 15 x 15 cm Water and Heat proof – 1 pcs", price: 600, image: "88.jpg" },
+          { name: "Luxury Dining Table Mat Rectangle 12 x 18 cm Water and Heat proof 1 pcs", price: 600, image: "99.jpg" },
+          { name: "Luxury Dining Table Mat Round 15 x 15 cm Water and Heat proof – 1 pcs", price: 600, image: "1010.jpg" },
+         
+    ];
+
+    const productList = document.getElementById("product-list");
+
+    products.forEach(product => {
+      const productCard = document.createElement("div");
+      productCard.className = "product";
+      productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" />
+            <div class="product-info">
+              <h3>${product.name}</h3>
+              <p class="price">PKR ${product.price.toLocaleString()}</p>
+              <button onclick="addToCart('${product.name}')">Add to Cart</button>
+            </div>
+          `;
+      productList.appendChild(productCard);
+    });
+
+    function addToCart(productName) {
+      alert(productName + " has been added to your cart!");
+    }
+  </script>
+  </main>
+</body>
+</html>

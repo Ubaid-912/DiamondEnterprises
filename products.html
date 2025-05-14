@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet " href="product.css">
+   <script src="script.js" defer></script>
+  <style>
+    button {
+      font-size: 40px;
+
+    }
+    .product {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.product-info {
+  padding: 1rem;
+}
+.product-info h3 {
+  margin-bottom: 0.5rem;
+}
+.price {
+  color: #0077cc;
+  font-weight: bold;
+}
+a{
+  text-decoration: none;
+}
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* button:hover {
+  background-color: #005fa3;
+} */
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>Diamond Enterprises</h1>
+    <nav>
+     <a class="hm" href="index.html">Home</a>
+      <a class="pro" href="products.html">Products</a>
+      <a class="con" href="contacts.html">Contact</a>
+      <a class="ab" href="about.html">About</a>
+    </nav>
+
+  </header>
+
+<div class="container">
+  <aside class="sidebar">
+    <h2>Categories</h2>
+    <div class="category">
+     <a href="cushions.html"><button class="category-toggle">Cushion & Cushion Cover</button></a> 
+    </div>
+    <div class="category">
+      <a href="tablemats.html"><button class="category-toggle">Table Mats</button></a>
+    </div>
+    <div class="category">
+      <button class="category-toggle">Dining Table Mats</button>
+    </div>
+    <div class="category">
+      <button class="category-toggle">Tea Coaster</button>
+    </div>
+  </aside>
+  <div class="main-content">
+  <!-- Place carousel here, INSIDE .container -->
+    <section aria-label="Newest Photos">
+      <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">‹</button>
+      <button class="carousel-button next" data-carousel-button="next">›</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+         <a href="cushions.html"> <img src="12.png" alt="Nature Image #1"></a>
+        </li>
+        <li class="slide">
+         <a href="cushions.html"> <img src="b2.png" alt="Nature Image #2"></a>
+        </li>
+        <li class="slide">
+          <img src="12.png" alt="Nature Image #3">
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+
+</body>
+
+</html>
